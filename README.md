@@ -2,23 +2,22 @@
 
 **TODO: Add description**
 
-## Installation
+## Ejemplo OTP Application in Elixir para MakerLab <3
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `super` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:super, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `super` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:super]]
-    end
-    ```
-
+```elixir
+iex(1)> Super.SubSupervisor.ServidorGenerico.siguiente_numero
+123
+iex(2)> Super.SubSupervisor.ServidorGenerico.siguiente_numero
+124
+iex(3)> Super.SubSupervisor.ServidorGenerico.siguiente_numero
+125
+iex(4)> Super.SubSupervisor.ServidorGenerico.incrementar_estado 7
+:ok
+iex(5)> Super.SubSupervisor.ServidorGenerico.siguiente_numero    
+133
+iex(6)> Super.SubSupervisor.ServidorGenerico.incrementar_estado "holi"
+##El procesos muere pero renace
+iex(7)> Super.SubSupervisor.ServidorGenerico.siguiente_numero         
+134
+iex(8)> :observer.start
+```
